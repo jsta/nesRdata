@@ -12,4 +12,53 @@ knitr::opts_chunk$set(
 )
 ```
 
-National Eutrophication Survey Data Package
+# National Eutrophication Survey Data Package
+
+## Installation
+
+```{r eval=FALSE}
+# install devtools if not found
+# install.packages(devtools)
+devtools::install_github("jsta/nesRdata")
+```
+
+
+## Usage
+
+```{r }
+library(nesRdata)
+```
+
+### Download external data and store in file system
+
+```{r message=FALSE}
+# for demonstration purposes we will set on-the-fly compilation to FALSE
+nes_get(version_id = "1", compile = FALSE)
+```
+
+### List files
+
+```{r }
+nes_ls(version_id = "1")
+```
+
+### Compile version
+
+```{r }
+# these files have metadata headers that need to be skipped
+nes_compile(version_id = "1")
+```
+
+### List versions
+
+```{r }
+nes_versions()
+```
+
+### Load data
+
+```{r }
+dt <- nes_load(version_id = "1")
+names(dt)
+lapply(dt, head)
+```
