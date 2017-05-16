@@ -1,6 +1,6 @@
 Package: nesRdata
 Title: National Eutrophication Survey Data Package
-Version: 0.0.0.9000
+Version: 0.1
 Author: Joseph Stachelek <stachel2@msu.edu>
 Maintainer: Joseph Stachelek <stachel2@msu.edu>
 URL: https://github.com/jsta/nesRdata
