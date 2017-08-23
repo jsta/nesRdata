@@ -20,7 +20,15 @@ nes_get <- function(version_id, skip = NA, dest_folder = NA, compile = TRUE){
   dir.create(versioned_path, showWarnings = FALSE)
   target <- file.path(versioned_path, "NES", "nes_data.csv")
 
-  get_if_not_exists(id = "knb.1279.1", target = target,
+  # cn <- dataone::CNode("PROD")
+  # mn <- dataone::getMNode(cn, "urn:node:KNB")
+  # qy <- dataone::query(cn, list(
+  #   rows = "300",
+  #   q = "title:*\"National Eutrophication\"*",
+  #   fl = "id,title,dateModified"),
+  #   as = "data.frame")
+
+  get_if_not_exists(id = "knb.1279.3", target = target,
                     versioned_path = versioned_path)
 
   if(compile){
