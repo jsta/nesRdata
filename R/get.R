@@ -28,7 +28,7 @@ nes_get <- function(version_id, skip = NA, dest_folder = NA, compile = TRUE){
   #   fl = "id,title,dateModified"),
   #   as = "data.frame")
 
-  get_if_not_exists(id = "knb.1279.3", target = target,
+  get_if_not_exists(id = "knb.1279.7", target = target,
                     versioned_path = versioned_path)
 
   if(compile){
