@@ -1,11 +1,11 @@
 Package: nesRdata
-Title: National Eutrophication Survey Data Package
+Title: National Eutrophication Survey Data
 Version: 0.1.0
 Author: Joseph Stachelek <stachel2@msu.edu>
 Maintainer: Joseph Stachelek <stachel2@msu.edu>
 URL: https://github.com/jsta/nesRdata
 BugReports: https://github.com/jsta/nesRdata/issues
-Description: Serves data from the USEPA National Eutrophication Survey.
+Description: Serves data from the United States Environmental Protection Agency (USEPA) National Eutrophication Survey <https://https://www.epa.gov/national-aquatic-resource-surveys>.
 Depends: R (>= 3.4.0)
 Imports: rappdirs,
   dplyr,
