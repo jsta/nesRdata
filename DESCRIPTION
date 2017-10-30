@@ -1,8 +1,10 @@
 Package: nesRdata
 Title: National Eutrophication Survey Data
 Version: 0.1.0
-Author: Joseph Stachelek <stachel2@msu.edu>
-Maintainer: Joseph Stachelek <stachel2@msu.edu>
+Authors@R: c(
+    person("Joseph", "Stachelek", role = c("aut","cre"), email = "stachel2@msu.edu", 
+    comment = c(ORCID = "0000-0002-5924-2464"))
+  )
 URL: https://github.com/jsta/nesRdata
 BugReports: https://github.com/jsta/nesRdata/issues
 Description: Serves data from the United States Environmental Protection Agency (USEPA) National Eutrophication Survey <https://https://www.epa.gov/national-aquatic-resource-surveys>.
