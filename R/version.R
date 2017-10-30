@@ -3,9 +3,8 @@
 #' @export
 #' @importFrom tools file_path_sans_ext
 #'
-#' @examples \dontrun{
+#' @examples
 #' nes_versions()
-#' }
 nes_versions <- function(){
   res <- tools::file_path_sans_ext(get_version_list())
 

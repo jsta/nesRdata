@@ -10,7 +10,5 @@ nes_versions()
 nes_versions
 }
 \examples{
-\dontrun{
 nes_versions()
-}
 }
