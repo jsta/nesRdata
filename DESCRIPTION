@@ -10,6 +10,7 @@ Depends: R (>= 3.4.0)
 Imports: rappdirs,
   dplyr,
   purrr,
+  readr,
   dataone
 License: GPL
 Encoding: UTF-8

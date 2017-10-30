@@ -18,7 +18,7 @@ nes_ls <- function(version_id, ...){
 #'@param version_id character nes version string
 #'@param folder file.path to data folder. optional.
 #'@param skip numeric vector of lines to skip on file read. optional.
-#'@importFrom utils read.csv
+#'@importFrom readr read_csv
 #'@importFrom purrr map_df
 #'@examples \dontrun{
 #'nes_ingest("1")
@@ -38,7 +38,7 @@ nes_ingest <- function(version_id, folder = NA, skip = NA){
 
   res <- lapply(seq_along(flist),
             function(i) purrr::map_df(flist[i],
-                                   read.csv,
+                                   readr::read_csv,
                                    skip = skip[i]))
   names(res) <- gsub("*.csv", "", basename(flist))
 

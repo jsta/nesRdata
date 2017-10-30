@@ -29,19 +29,25 @@ devtools::install_github("jsta/nesRdata")
 library(nesRdata)
 ```
 
-### Download external data and store in file system
+### View static compilation of all lakes
+
+```{r }
+head(data(nes))
+```
+
+### Download dynamic external data and store in file system
 
 ```{r message=FALSE}
 nes_get(version_id = "1")
 ```
 
-### List versions
+#### List versions
 
 ```{r }
 nes_versions()
 ```
 
-### Load data
+#### Load data
 
 ```{r }
 dt <- nes_load(version_id = "1")
