@@ -15,7 +15,5 @@ nes_ls(version_id, ...)
 nes_ls
 }
 \examples{
-\dontrun{
 nes_ls("1")
-}
 }

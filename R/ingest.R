@@ -5,9 +5,8 @@
 #'
 #' @export
 #'
-#' @examples \dontrun{
+#' @examples
 #' nes_ls("1")
-#' }
 nes_ls <- function(version_id, ...){
   list.files(file.path(cache_path(), version_id, "NES"),
              pattern = "\\.csv$", ...)
