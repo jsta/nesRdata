@@ -7,7 +7,7 @@ Authors@R: c(
   )
 URL: https://github.com/jsta/nesRdata
 BugReports: https://github.com/jsta/nesRdata/issues
-Description: Serves data from the United States Environmental Protection Agency (USEPA) National Eutrophication Survey <https://https://www.epa.gov/national-aquatic-resource-surveys>.
+Description: Serves data from the United States Environmental Protection Agency (USEPA) National Eutrophication Survey <https://www.epa.gov/national-aquatic-resource-surveys>.
 Depends: R (>= 3.4.0)
 Imports: rappdirs,
   dplyr,
