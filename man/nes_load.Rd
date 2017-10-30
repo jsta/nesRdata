@@ -2,7 +2,7 @@
 % Please edit documentation in R/load.R
 \name{nes_load}
 \alias{nes_load}
-\title{temp_load}
+\title{nes_load}
 \usage{
 nes_load(version_id, format = "rds", fpath = NA)
 }

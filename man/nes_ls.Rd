@@ -2,7 +2,7 @@
 % Please edit documentation in R/ingest.R
 \name{nes_ls}
 \alias{nes_ls}
-\title{temp_ls}
+\title{nes_ls}
 \usage{
 nes_ls(version_id, ...)
 }
@@ -12,7 +12,7 @@ nes_ls(version_id, ...)
 \item{...}{extra arguments passed to list.files}
 }
 \description{
-temp_ls
+nes_ls
 }
 \examples{
 \dontrun{

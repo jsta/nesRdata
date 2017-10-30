@@ -7,7 +7,7 @@
 nes_compile(version_id, format = "rds", folder = NA, skip = NA)
 }
 \arguments{
-\item{version_id}{character temp database version string}
+\item{version_id}{character nes version string}
 
 \item{format}{character choice of "rds" or "sqlite"}
 

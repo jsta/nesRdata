@@ -2,7 +2,7 @@
 #'@title Compile data to R data (rds) object
 #'@export
 #'@description Compile data from component flat files
-#'@param version_id character temp database version string
+#'@param version_id character nes version string
 #'@param format character choice of "rds" or "sqlite"
 #'@param folder file.path to data folder.
 #'@param skip numeric vector of lines to skip on file read. optional.

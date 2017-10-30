@@ -2,12 +2,12 @@
 % Please edit documentation in R/version.R
 \name{nes_versions}
 \alias{nes_versions}
-\title{temp_versions}
+\title{nes_versions}
 \usage{
 nes_versions()
 }
 \description{
-temp_versions
+nes_versions
 }
 \examples{
 \dontrun{

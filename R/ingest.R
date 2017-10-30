@@ -1,4 +1,4 @@
-#' temp_ls
+#' nes_ls
 #'
 #' @param version_id character version id
 #' @param ... extra arguments passed to list.files
@@ -16,7 +16,7 @@ nes_ls <- function(version_id, ...){
 #'@name nes_ingest
 #'@title Ingest flat files
 #'@description Ingest data from component flat files
-#'@param version_id character temp database version string
+#'@param version_id character nes version string
 #'@param folder file.path to data folder. optional.
 #'@param skip numeric vector of lines to skip on file read. optional.
 #'@importFrom utils read.csv

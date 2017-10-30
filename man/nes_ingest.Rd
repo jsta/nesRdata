@@ -7,7 +7,7 @@
 nes_ingest(version_id, folder = NA, skip = NA)
 }
 \arguments{
-\item{version_id}{character temp database version string}
+\item{version_id}{character nes version string}
 
 \item{folder}{file.path to data folder. optional.}
 
