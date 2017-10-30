@@ -9,7 +9,7 @@
 #'@importFrom utils read.table
 #'@importFrom rappdirs user_data_dir
 #'@examples \dontrun{
-#' temp_compile("1", format = "rds")
+#' nes_compile("1", format = "rds")
 #' }
 nes_compile <- function(version_id, format = "rds", folder = NA, skip = NA){
 

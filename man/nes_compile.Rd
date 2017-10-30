@@ -20,6 +20,6 @@ Compile data from component flat files
 }
 \examples{
 \dontrun{
-temp_compile("1", format = "rds")
+nes_compile("1", format = "rds")
 }
 }
