@@ -32,7 +32,8 @@ library(nesRdata)
 ### View static compilation of all lakes
 
 ```{r }
-head(data(nes))
+data(nes)
+head(nes)
 ```
 
 ### Download dynamic external data and store in file system
