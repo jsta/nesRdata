@@ -45,7 +45,7 @@ head(nes)
 nes_get(version_id = "1")
 ```
 
-#### List versions
+#### List cached (non-temporary) versions
 
 ```{r }
 nes_versions()

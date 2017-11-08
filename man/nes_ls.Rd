@@ -4,10 +4,12 @@
 \alias{nes_ls}
 \title{nes_ls}
 \usage{
-nes_ls(version_id, ...)
+nes_ls(version_id, folder = temp_path(), ...)
 }
 \arguments{
 \item{version_id}{character version id}
+
+\item{folder}{file.path to NES data; pass cache_path() to use OS agnostic cache location specified by the rappdirs package.}
 
 \item{...}{extra arguments passed to list.files}
 }

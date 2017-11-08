@@ -4,10 +4,12 @@
 \alias{nes_load}
 \title{nes_load}
 \usage{
-nes_load(version_id, format = "rds", fpath = NA)
+nes_load(version_id, folder = tempdir(), format = "rds", fpath = NA)
 }
 \arguments{
 \item{version_id}{character database version string}
+
+\item{folder}{file.path to data folder; use cache_path() to load cached (non-temporary) data}
 
 \item{format}{character choice of rds or sqlite}
 
@@ -18,7 +20,13 @@ Load files from local file system
 }
 \examples{
 \dontrun{
+
+# load from tempdir
+nes_get("1")
 dt  <- nes_load("1")
-dt2 <- nes_load("2")
+
+# load from cached
+nes_get("1", dest_folder = cache_path())
+dt <- nes_load("1", folder = cache_path())
 }
 }

@@ -4,14 +4,14 @@
 \alias{nes_compile}
 \title{Compile data to R data (rds) object}
 \usage{
-nes_compile(version_id, format = "rds", folder = NA, skip = NA)
+nes_compile(version_id, format = "rds", folder = tempdir(), skip = NA)
 }
 \arguments{
 \item{version_id}{character nes version string}
 
 \item{format}{character choice of "rds" or "sqlite"}
 
-\item{folder}{file.path to data folder.}
+\item{folder}{file.path to data folder; set to cache_path() to have data persist between sessions.}
 
 \item{skip}{numeric vector of lines to skip on file read. optional.}
 }
@@ -20,6 +20,10 @@ Compile data from component flat files
 }
 \examples{
 \dontrun{
+nes_get("1")
 nes_compile("1", format = "rds")
+
+nes_get("1", dest_folder = cache_path(), compile = FALSE)
+nes_compile("1", folder = cache_path())
 }
 }

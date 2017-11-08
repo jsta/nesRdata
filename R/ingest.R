@@ -1,14 +1,16 @@
 #' nes_ls
 #'
 #' @param version_id character version id
+#' @param folder file.path to NES data; pass cache_path() to use OS agnostic cache location specified by the rappdirs package.
 #' @param ... extra arguments passed to list.files
+#' @inheritParams nes_get
 #'
 #' @export
 #'
 #' @examples
 #' nes_ls("1")
-nes_ls <- function(version_id, ...){
-  list.files(file.path(cache_path(), version_id, "NES"),
+nes_ls <- function(version_id, folder = temp_path(), ...){
+  list.files(file.path(folder, version_id, "NES"),
              pattern = "\\.csv$", ...)
 }
 
@@ -27,7 +29,7 @@ nes_ls <- function(version_id, ...){
 nes_ingest <- function(version_id, folder = NA, skip = NA){
 
   # Set-up paths ####
-  flist <- nes_ls(version_id = version_id,
+  flist <- nes_ls(version_id = version_id, folder = folder,
                   full.names = TRUE, include.dirs = TRUE)
 
   # Read data ####

@@ -10,15 +10,19 @@
 #' @param dest_folder file.path optional will default to the location returned by \code{\link[rappdirs]{user_data_dir}}.
 #' @param compile logical perform on-the-fly compilation to rds?
 #' @examples \dontrun{
-#' nes_get(version_id = "1", compile = FALSE)
+#' nes_get(version_id = "1") # save to temp folder
+#'
+#' nes_get(version_id = "1", dest_folder = cache_path() # save to cache folder)
 #' }
-nes_get <- function(version_id, skip = NA, dest_folder = NA, compile = TRUE){
+nes_get <- function(version_id, skip = NA, dest_folder = tempdir(), compile = TRUE){
 
   # dir.exists(cache_path())
-  dir.create(cache_path(), showWarnings = FALSE)
-  versioned_path <- paste0(cache_path(), version_id)
+  # dir.create(cache_path(), showWarnings = FALSE)
+  versioned_path  <- file.path(dest_folder, version_id)
+  versioned_cache <- file.path(cache_path(), version_id)
   dir.create(versioned_path, showWarnings = FALSE)
-  target <- file.path(versioned_path, "NES", "nes_data.csv")
+  targets <- list(temp_target  = file.path(versioned_path, "NES", "nes_data.csv"),
+               cache_target = file.path(versioned_cache, "NES", "nes_data.csv"))
 
   # cn <- dataone::CNode("PROD")
   # mn <- dataone::getMNode(cn, "urn:node:KNB")
@@ -28,10 +32,10 @@ nes_get <- function(version_id, skip = NA, dest_folder = NA, compile = TRUE){
   #   fl = "id,title,dateModified"),
   #   as = "data.frame")
 
-  get_if_not_exists(id = "knb.1279.7", target = target,
+  get_if_not_exists(id = "knb.1279.7", target = targets,
                     versioned_path = versioned_path)
 
   if(compile){
-    nes_compile(version_id = version_id, skip = skip)
+    nes_compile(version_id = version_id, skip = skip, folder = dest_folder)
   }
 }
