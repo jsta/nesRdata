@@ -18,25 +18,35 @@
 #' dt <- nes_load("1", folder = cache_path())
 #' }
 nes_load <- function(version_id, folder = tempdir(), format = "rds", fpath = NA){
-
+browser()
   if(!is.na(fpath)){
-
     if(format == "sqlite"){
       dplyr::src_sqlite(fpath)
     }else{
       readRDS(fpath)
     }
-
   }else{
-
     if(format == "sqlite"){
       sqlite_path <- file.path(folder, "sqlite3")
       stop_if_not_exists(sqlite_path)
       dplyr::src_sqlite(sqlite_path)
     }else{
       rds_path <- file.path(folder, paste0("NES_", version_id, ".rds"))
-      stop_if_not_exists(rds_path)
-      readRDS(rds_path)
+      cached_path <- file.path(cache_path(), paste0("NES_", version_id, ".rds"))
+
+      if(file.exists(rds_path)){
+        res <- readRDS(rds_path)
+        if(length(names(res)) > 0){
+          res
+        }
+      }else{
+        if(file.exists(cached_path)){
+          res <- readRDS(cached_path)
+          res
+        }else{
+          stop_if_not_exists(cached_path)
+        }
+      }
     }
 
   }

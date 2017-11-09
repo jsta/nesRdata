@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-```{r eval=FALSE}
+```{r installation, eval=FALSE}
 # install devtools if not found
 # install.packages(devtools)
 devtools::install_github("jsta/nesRdata")
@@ -28,33 +28,43 @@ devtools::install_github("jsta/nesRdata")
 
 ## Usage
 
-```{r }
+```{r load_package}
 library(nesRdata)
 ```
 
 ### View static compilation of all lakes
 
-```{r }
+```{r static}
 data(nes)
 head(nes)
 ```
 
-### Download dynamic external data and store in file system
+### Download dynamic external data to temporary location
 
-```{r message=FALSE}
+```{r get_temp, message=FALSE}
 nes_get(version_id = "1")
+```
+
+### Download dynamic external data and cache in file system
+
+```{r get_cached, message=FALSE, eval=FALSE}
+nes_get(version_id = "1", dest_folder = cache_path())
 ```
 
 #### List cached (non-temporary) versions
 
-```{r }
+```{r versions}
 nes_versions()
 ```
 
 #### Load data
 
-```{r }
+```{r load_data}
 dt <- nes_load(version_id = "1")
 names(dt)
 lapply(dt, head)
 ```
+
+## References
+
+Stachelek J., Ford, C., Kincaid, D., King, K., Miller, H, and Nagelkirk, R.: The National Eutrophication Survey: lake characteristics and historical nutrient concentrations, Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2017-52 , (in review), 2017.

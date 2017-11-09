@@ -22,7 +22,7 @@ nes_get <- function(version_id, skip = NA, dest_folder = tempdir(), compile = TR
   versioned_cache <- file.path(cache_path(), version_id)
   dir.create(versioned_path, showWarnings = FALSE)
   targets <- list(temp_target  = file.path(versioned_path, "NES", "nes_data.csv"),
-               cache_target = file.path(versioned_cache, "NES", "nes_data.csv"))
+                  cache_target = file.path(versioned_cache, "NES", "nes_data.csv"))
 
   # cn <- dataone::CNode("PROD")
   # mn <- dataone::getMNode(cn, "urn:node:KNB")
