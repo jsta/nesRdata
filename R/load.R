@@ -18,7 +18,7 @@
 #' dt <- nes_load("1", folder = cache_path())
 #' }
 nes_load <- function(version_id, folder = tempdir(), format = "rds", fpath = NA){
-browser()
+
   if(!is.na(fpath)){
     if(format == "sqlite"){
       dplyr::src_sqlite(fpath)
