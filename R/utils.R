@@ -37,3 +37,10 @@ stop_if_not_exists <- function(src_path) {
 get_version_list <- function(...){
   list.files(cache_path(), pattern = ".rds$", ...)
 }
+
+calculate_tp_in <- function(nes){
+  # kg to mg
+  nes$tp_in <- nes$p_total * 1000000
+  # cms to l per year
+  nes$tp_in / ((nes$total_inflow * 60 * 60 * 24 * 365) / 0.001)
+}
