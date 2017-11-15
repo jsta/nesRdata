@@ -16,6 +16,14 @@
 #' }
 nes_get <- function(version_id, dest_folder = tempdir(), skip = NA, compile = TRUE){
 
+  # skip sanity check
+  if(!is.na(skip)){
+      tryCatch(if(skip %% 1 != 0){
+          stop("'skip' must be an integer of class numeric.")
+        },
+    error = function(e) stop("'skip' must be an integer of class numeric."))
+  }
+
   # dir.exists(cache_path())
   # dir.create(cache_path(), showWarnings = FALSE)
   versioned_path  <- file.path(dest_folder, version_id)
