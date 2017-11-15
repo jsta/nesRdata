@@ -14,7 +14,7 @@
 #'
 #' nes_get(version_id = "1", dest_folder = cache_path() # save to cache folder)
 #' }
-nes_get <- function(version_id, skip = NA, dest_folder = tempdir(), compile = TRUE){
+nes_get <- function(version_id, dest_folder = tempdir(), skip = NA, compile = TRUE){
 
   # dir.exists(cache_path())
   # dir.create(cache_path(), showWarnings = FALSE)

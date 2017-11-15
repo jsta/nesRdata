@@ -4,14 +4,14 @@
 \alias{nes_get}
 \title{nes_get}
 \usage{
-nes_get(version_id, skip = NA, dest_folder = tempdir(), compile = TRUE)
+nes_get(version_id, dest_folder = tempdir(), skip = NA, compile = TRUE)
 }
 \arguments{
 \item{version_id}{character version id}
 
-\item{skip}{numeric vector of lines to skip on file read. optional.}
-
 \item{dest_folder}{file.path optional will default to the location returned by \code{\link[rappdirs]{user_data_dir}}.}
+
+\item{skip}{numeric vector of lines to skip on file read. optional.}
 
 \item{compile}{logical perform on-the-fly compilation to rds?}
 }
