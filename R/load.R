@@ -27,6 +27,7 @@ nes_load <- function(version_id, folder = tempdir(), format = "rds", fpath = NA)
 
       if(file.exists(rds_path)){
         res <- readRDS(rds_path)
+        res
       }else{
         # if(file.exists(cached_path)){
           res <- readRDS(cached_path)
