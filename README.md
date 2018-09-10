@@ -110,6 +110,11 @@ names(dt)
 lapply(dt, head)
 ```
 
+Metadata
+--------
+
+See: <https://github.com/ReproducibleQM/NES/blob/master/METADATA.md>
+
 References
 ----------
 

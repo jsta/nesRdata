@@ -65,6 +65,10 @@ names(dt)
 lapply(dt, head)
 ```
 
+## Metadata
+
+See: https://github.com/ReproducibleQM/NES/blob/master/METADATA.md
+
 ## References
 
 Stachelek, J., Ford, C., Kincaid, D., King, K., Miller, H. and Nagelkirk, R., 2018. The National Eutrophication Survey: lake characteristics and historical nutrient concentrations. Earth System Science Data, 10(1), pp.81-86.
