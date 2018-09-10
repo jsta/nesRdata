@@ -67,7 +67,7 @@ lapply(dt, head)
 
 ## Metadata
 
-See: https://github.com/ReproducibleQM/NES/blob/master/METADATA.md
+`help.search("^nes$", package = "nesRdata")`
 
 ## References
 
