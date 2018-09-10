@@ -41,7 +41,7 @@ head(nes)
 
 ### Download dynamic external data to temporary location
 
-```{r get_temp, message=FALSE}
+```{r get_temp, message=FALSE, eval=FALSE}
 nes_get(version_id = "1")
 ```
 
@@ -53,13 +53,13 @@ nes_get(version_id = "1", dest_folder = cache_path())
 
 #### List cached (non-temporary) versions
 
-```{r versions}
+```{r versions, eval=FALSE}
 nes_versions()
 ```
 
 #### Load data
 
-```{r load_data}
+```{r load_data, eval=FALSE}
 dt <- nes_load(version_id = "1")
 names(dt)
 lapply(dt, head)
@@ -67,4 +67,4 @@ lapply(dt, head)
 
 ## References
 
-Stachelek J., Ford, C., Kincaid, D., King, K., Miller, H, and Nagelkirk, R.: The National Eutrophication Survey: lake characteristics and historical nutrient concentrations, Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2017-52 , (in review), 2017.
+Stachelek, J., Ford, C., Kincaid, D., King, K., Miller, H. and Nagelkirk, R., 2018. The National Eutrophication Survey: lake characteristics and historical nutrient concentrations. Earth System Science Data, 10(1), pp.81-86.
