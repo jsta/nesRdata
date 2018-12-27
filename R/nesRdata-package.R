@@ -16,7 +16,7 @@
 #'   surface_area   \tab  the area of the water surface\tab sq km \cr
 #'   mean_depth    \tab  the volume of the water body divided by the surface area in square meters\tab  meters \cr
 #'   total_inflow      \tab  the mean of the inflows of all tributaries and the immediate drainage \tab  cubic meters per second \cr
-#'   retention_time \tab  a mean value determined by dividing the lake volume, in cubic meters, by the mean annual outflow in cubic meters per unit cof time years or days \cr
+#'   retention_time \tab  a mean value determined by dividing the lake volume, in cubic meters, by the mean annual outflow in cubic meters per unit of time in years or days \cr
 #'   retention_time_units \tab  the units of time for each retention entry\tab years or days \cr
 #'   alkalinity \tab  alkalinity\tab milligrams per liter \cr
 #'   conductivity \tab  conductivity\tab microohms \cr
