@@ -4,7 +4,8 @@
 \alias{nes_get}
 \title{nes_get}
 \usage{
-nes_get(version_id, dest_folder = tempdir(), skip = NA, compile = TRUE)
+nes_get(version_id, dest_folder = tempdir(), skip = NA,
+  compile = TRUE)
 }
 \arguments{
 \item{version_id}{character version id}
