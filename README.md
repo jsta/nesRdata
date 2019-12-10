@@ -11,9 +11,12 @@ developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repo
 ## Installation
 
 ``` r
-# install devtools if not found
-# install.packages(devtools)
-devtools::install_github("jsta/nesRdata")
+# install stable version from CRAN
+install.packages("nesRdata")
+
+# install development version from Github
+# install devtools if not found - install.packages("devtools")
+# devtools::install_github("jsta/nesRdata", update_dependencies = TRUE)
 ```
 
 ## Usage
