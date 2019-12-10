@@ -4,8 +4,7 @@
 \alias{nes_compile}
 \title{Compile data to R data (rds) object}
 \usage{
-nes_compile(version_id, format = "rds", folder = tempdir(),
-  skip = NA)
+nes_compile(version_id, format = "rds", folder = tempdir(), skip = NA)
 }
 \arguments{
 \item{version_id}{character nes version string}
