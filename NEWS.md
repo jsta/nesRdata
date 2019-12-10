@@ -1,3 +1,9 @@
+# nesRdata 0.3
+
+## BUG FIXES
+
+* Pull version 5 of the NES data with many transcription error fixes (@hkhorasani)
+
 # nesRdata 0.2
 
 ## BUG FIXES

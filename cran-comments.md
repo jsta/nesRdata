@@ -1,5 +1,5 @@
 ## Test environments
-* local ubuntu 18, R 3.5.1
+* local ubuntu 18, R 3.6.1
 * win-builder (devel and release)
 
 ## R CMD check results
