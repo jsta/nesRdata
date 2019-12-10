@@ -72,6 +72,10 @@ lapply(dt, head)
 
 `help.search("^nes$", package = "nesRdata")`
 
+## Contributing
+
+We’ve tried to fix any transciption errors from the original data files but it’s difficult to catch them all. If you find any errors please open an issue or submit a pull request against the files at https://github.com/ReproducibleQM/NES
+
 ## References
 
 Stachelek, J., Ford, C., Kincaid, D., King, K., Miller, H. and Nagelkirk, R., 2018. The National Eutrophication Survey: lake characteristics and historical nutrient concentrations. Earth System Science Data, 10(1), pp.81-86.
