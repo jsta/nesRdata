@@ -1,6 +1,5 @@
 #' nes_ls
 #'
-#' @param version_id character version id
 #' @param folder file.path to NES data; pass cache_path() to use OS agnostic cache location specified by the rappdirs package.
 #' @param ... extra arguments passed to list.files
 #' @inheritParams nes_get

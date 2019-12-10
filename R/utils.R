@@ -14,7 +14,7 @@ get_if_not_exists <- function(id, target, versioned_path){
     cn <- dataone::CNode("PROD")
     mn <- dataone::getMNode(cn, "urn:node:KNB")
 
-    dt <- dataone::getPackage(mn, paste0("resourceMap_", id))
+    dt <- dataone::getPackage(mn, id)
     td <- tempdir()
     unzip(dt, exdir = td)
     unzip(list.files(td,

@@ -10,12 +10,12 @@
 #' @examples \dontrun{
 #'
 #' # load from tempdir
-#' nes_get("1")
-#' dt  <- nes_load("1")
+#' nes_get("5")
+#' dt  <- nes_load("5")
 #'
 #' # load from cached
-#' nes_get("1", dest_folder = cache_path())
-#' dt <- nes_load("1", folder = cache_path())
+#' nes_get("5", dest_folder = cache_path())
+#' dt  <- nes_load("5")
 #' }
 nes_load <- function(version_id, folder = tempdir(), format = "rds", fpath = NA){
 
