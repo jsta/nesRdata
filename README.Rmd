@@ -42,13 +42,13 @@ head(nes)
 ### Download dynamic external data to temporary location
 
 ```{r get_temp, message=FALSE, eval=FALSE}
-nes_get(version_id = "1")
+nes_get(version_id = "5")
 ```
 
 ### Download dynamic external data and cache in file system
 
 ```{r get_cached, message=FALSE, eval=FALSE}
-nes_get(version_id = "1", dest_folder = cache_path())
+nes_get(version_id = "5", dest_folder = cache_path())
 ```
 
 #### List cached (non-temporary) versions
@@ -60,7 +60,7 @@ nes_versions()
 #### Load data
 
 ```{r load_data, eval=FALSE}
-dt <- nes_load(version_id = "1")
+dt <- nes_load(version_id = "5")
 names(dt)
 lapply(dt, head)
 ```
