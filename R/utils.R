@@ -14,6 +14,7 @@ get_if_not_exists <- function(id, target, versioned_path){
     cn <- dataone::CNode("PROD")
     mn <- dataone::getMNode(cn, "urn:node:KNB")
 
+    message(paste0("Downloading DataONE package ", id, " ..."))
     dt <- dataone::getPackage(mn, id)
     td <- tempdir()
     unzip(dt, exdir = td)
