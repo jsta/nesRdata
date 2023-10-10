@@ -2,7 +2,7 @@ Package: nesRdata
 Title: National Eutrophication Survey Data
 Version: 0.3.1
 Authors@R: c(
-    person("Joseph", "Stachelek", role = c("aut","cre"), email = "stachel2@msu.edu", 
+    person("Jemma", "Stachelek", role = c("aut","cre"), email = "stachel2@msu.edu", 
     comment = c(ORCID = "0000-0002-5924-2464"))
   )
 URL: https://github.com/jsta/nesRdata
