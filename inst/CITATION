@@ -20,7 +20,7 @@ citEntry(entry = "Article",
 citEntry(entry = "Manual",
   title        = "nesRdata: National Eutrophication Survey data",
   author       = personList(
-                   as.person("Joseph Stachelek")),
+                   as.person("Jemma Stachelek")),
   year         = "2018",
   note         = "R package version 0.2.0",
   url          = "https://cran.r-project.org/package=nesRdata",
